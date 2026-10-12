@@ -1,15 +1,15 @@
 from Views.telaCadastro import TelaCadastro
-from Controllers import controladorClinica, controladorPaciente, controladorProfissional, controladorTipoAtendimento
 
 
 class ControladorCadastro():
 
-    def __init__(self, controlador_tipo_atendimento, controlador_paciente, controlador_profissional, controlador_clinica):
+    def __init__(self,controlador_tipo_atendimento,controlador_paciente,controlador_profissional,controlador_clinica):
         self.__tela_cadastro = TelaCadastro()
+
         self.__controlador_clinica = controlador_clinica
+        self.__controlador_tipo_atendimento = controlador_tipo_atendimento
         self.__controlador_paciente = controlador_paciente
         self.__controlador_profissional = controlador_profissional
-        self.__controlador_tipo_atendimento = controlador_tipo_atendimento
 
     def abre_tela(self):
         continua = True
@@ -34,4 +34,4 @@ class ControladorCadastro():
                 continua = False
 
             else:
-                print("Opção inválida.")
+                self.__tela_cadastro.mostra_mensagem("Opção inválida.")
