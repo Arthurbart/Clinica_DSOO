@@ -1,5 +1,5 @@
 from Views.telaRegistro import TelaRegistro
-from Controllers import controladorAtendimento, controladorProcedimento, controladorPagamento, controladorTipoAtendimento
+from Controllers import controladorAtendimento, controladorProcedimento, controladorPagamento
 
 class ControladorRegistro():
 
@@ -19,6 +19,7 @@ class ControladorRegistro():
             self.__controlador_clinica,
             self.__controlador_pagamentos
         )
+        self.__controlador_procedimentos.definir_controlador_atendimento(self.__controlador_atendimentos)
 
     
     def abre_tela(self):
@@ -41,7 +42,7 @@ class ControladorRegistro():
                 continua = False
 
             else:
-                print("Opção inválida.")
+                self.__tela_registro.mostra_mensagem("Opção inválida.")
 
 
     def obter_atendimentos(self):
