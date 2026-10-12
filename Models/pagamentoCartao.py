@@ -23,5 +23,5 @@ class PagamentoCartao(Pagamento):
     def bandeira(self, bandeira):
         self.__bandeira = bandeira
 
-    def realizar_pagamento(self):
-        pass
+    def forma_pagamento(self):
+        return "Cartão de Crédito"

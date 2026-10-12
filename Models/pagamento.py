@@ -1,4 +1,6 @@
-class Pagamento():
+from abc import ABC, abstractmethod
+
+class Pagamento(ABC):
     def __init__(self, data, atendimento, paciente, valor_pago):
         self.__data = data
         self.__atendimento = atendimento
@@ -36,3 +38,7 @@ class Pagamento():
     @valor_pago.setter
     def valor_pago(self, valor_pago):
         self.__valor_pago = valor_pago
+
+    @abstractmethod
+    def forma_pagamento(self):
+        pass

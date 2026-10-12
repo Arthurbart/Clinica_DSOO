@@ -13,3 +13,6 @@ class PagamentoPix(Pagamento):
     def cpf_pagador(self, cpf_pagador):
         self.__cpf_pagador = cpf_pagador
 
+    def forma_pagamento(self):
+        return "PIX"
+

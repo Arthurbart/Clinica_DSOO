@@ -1,6 +1,8 @@
 class Atendimento():
     def __init__(self, clinica, paciente, profissional, data,
-                 horario_inicio, horario_fim, tipo_atendimento, valor, procedimento):
+                 horario_inicio, horario_fim, tipo_atendimento,
+                 valor_atendimento, valor_procedimentos, valor,
+                 procedimentos):
 
         self.__clinica = clinica
         self.__paciente = paciente
@@ -9,8 +11,10 @@ class Atendimento():
         self.__horario_inicio = horario_inicio
         self.__horario_fim = horario_fim
         self.__tipo_atendimento = tipo_atendimento
+        self.__valor_atendimento = valor_atendimento
+        self.__valor_procedimentos = valor_procedimentos
         self.__valor = valor
-        self.__procedimento = procedimento
+        self.__procedimentos = procedimentos
 
     @property
     def clinica(self):
@@ -69,6 +73,22 @@ class Atendimento():
         self.__tipo_atendimento = tipo_atendimento
 
     @property
+    def valor_atendimento(self):
+        return self.__valor_atendimento
+
+    @valor_atendimento.setter
+    def valor_atendimento(self, valor_atendimento):
+        self.__valor_atendimento = valor_atendimento
+
+    @property
+    def valor_procedimentos(self):
+        return self.__valor_procedimentos
+
+    @valor_procedimentos.setter
+    def valor_procedimentos(self, valor_procedimentos):
+        self.__valor_procedimentos = valor_procedimentos
+
+    @property
     def valor(self):
         return self.__valor
 
@@ -77,9 +97,9 @@ class Atendimento():
         self.__valor = valor
 
     @property
-    def procedimento(self):
-        return self.__procedimento
+    def procedimentos(self):
+        return self.__procedimentos
 
-    @procedimento.setter
-    def procedimento(self, procedimento):
-        self.__procedimento = procedimento
+    @procedimentos.setter
+    def procedimentos(self, procedimentos):
+        self.__procedimentos = procedimentos
