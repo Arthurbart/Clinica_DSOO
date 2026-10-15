@@ -77,20 +77,6 @@ class TelaPagamento():
             "cpf_pagador": cpf_pagador
         }
 
-    def pega_dados_edicao_pagamento(self):
-        data = input("Digite a nova data do pagamento (dd/mm/aaaa): ")
-
-        try:
-            valor_pago = float(input("Digite o novo valor pago: "))
-        except ValueError:
-            print("Digite um valor numérico válido.")
-            return None
-
-        return {
-            "data": data,
-            "valor_pago": valor_pago
-        }
-
     def seleciona_pagamento(self, pagamentos):
         print("\n===== PAGAMENTOS =====")
 
