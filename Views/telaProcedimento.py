@@ -1,6 +1,4 @@
 class TelaProcedimento():
-    def __init__(self):
-        pass
 
     def mostrar_opcoes(self):
         print("\n===== PROCEDIMENTO =====")
